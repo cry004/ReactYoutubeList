@@ -3,14 +3,13 @@ import React, { Component } from 'react';
 class SearchBar extends Component {
   constructor(props){
     super(props);
-
     this.state = { term: ''};
-
   }
   render(){
+    const placeholder = 'Video title ...'
     return (
         <div className="search-bar">
-          <input
+          <input placeholder={placeholder}
           value={this.state.term}
           onChange={ event => this.onInputChange(event.target.value)} />
         </div>
